@@ -209,7 +209,6 @@
     }
 
     #contact_message:focus {
-        border-color: none;
         background-color: inherit;
         box-shadow: none;
     }
