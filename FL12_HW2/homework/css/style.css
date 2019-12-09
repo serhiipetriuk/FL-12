@@ -159,6 +159,8 @@
         vertical-align: super;
         font-size: xx-small;
         font-weight: bolder;
+        display: inline-block;
+        text-decoration: none;
     }
 
     .heading>.padding-medium>h2 {
@@ -196,7 +198,6 @@
 
     .tm-section-description {
         line-height: 30px;
-        margin: 25px;
     }
 
     .form-control {
