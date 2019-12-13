@@ -1,0 +1,277 @@
+@mixin text-style {
+    font-family: $landing-logo-font;
+    color: map-get($colors, landing-logo-font-color);
+}
+
+@mixin button-style {
+    width: 140px;
+    height: 48px;
+    background-color: map-get($colors, button-background-color);
+    font-family: $header-heading-font;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    color: white;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+@mixin footer-text-style {
+    padding-top: 138px;
+    font-family: $landing-logo-font;
+    color: map-get($colors, section-card-text-color);
+    font-size: 0.9em;
+    width: 290px;
+}
+
+.landing-logo {
+    padding-top: 20px;
+    padding-bottom: 88px;
+    width: 112px;
+
+    img {
+        height: 35px;
+        float: left;
+    }
+
+    p {
+        line-height: 15px;
+        padding-top: 5px;
+        margin-top: 0px;
+        float: right;
+        width: 77px;
+        font-size: large;
+        font-weight: bolder;
+        text-align: center;
+        @include text-style;
+
+        span {
+            font-size: 0.5em;
+            display: block;
+            font-weight: normal;
+        }
+    }
+
+}
+
+body {
+    margin: 0;
+    background-color: map-get($colors, body-color);
+
+    .header {
+
+        background-image: url($header-background-url);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+
+        border: transparent 0px solid;
+        border-bottom-right-radius: 40%;
+
+        height: 720px;
+
+        .header-wrap {
+            padding-left: 10%;
+            margin-bottom: 173px;
+
+            .header_heading {
+                margin-top: 0;
+                line-height: 55px;
+                font-family: $header-heading-font;
+                color: map-get($colors, landing-logo-font-color);
+                width: 500px;
+                font-size: 3.5em;
+                font-weight: bold;
+                letter-spacing: 1px;
+
+                &:after {
+                    display: inline-block;
+                    height: 45px;
+                    line-height: 50%;
+                    content: "awesome";
+                    background-color: map-get($colors, text-selection-color);
+                    position: relative;
+                    bottom: 55px;
+                }
+            }
+
+            .header_text {
+                @include text-style;
+                width: 600px;
+                font-size: 0.9em;
+                text-align: left;
+                letter-spacing: 1px;
+                white-space: pre-line;
+                margin-bottom: 65px;
+
+            }
+
+            button {
+                margin-right: 150px;
+                @include button-style;
+            }
+
+            a {
+                width: 200px;
+                font-family: $header-heading-font;
+                color: white;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .section_text {
+            text-align: center;
+            font-size: 2em;
+            font-weight: 600;
+            font-family: $header-heading-font;
+            color: map-get($colors, landing-logo-font-color);
+
+            &:after {
+                display: inline-block;
+                height: 44px;
+                line-height: 170%;
+                content: "adventure";
+                background-color: map-get($colors, text-selection-color);
+                position: relative;
+                right: 158px;
+            }
+        }
+
+        .section_card_wrap {
+
+            width: 58%;
+            display: flex;
+            flex-direction: column;
+
+            .section_card {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-radius: 8px;
+                width: 100%;
+                margin-bottom: 25px;
+                background-color: map-get($colors, back-color);
+
+
+                .section_card_img {
+                    width: 38%;
+                    border-radius: 8px;
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                    margin-left: 20px;
+                }
+
+                .section_card_right_container {
+                    width: 42%;
+                    margin-left: 88px;
+                    font-family: $header-heading-font;
+
+                    .section_card_heading {
+                        color: white;
+                        font-size: 1.5em;
+                        font-weight: 600;
+                        text-align: center;
+                    }
+
+                    .section_card_text {
+                        color: map-get($colors, section-card-text-color);
+                        font-family: $landing-logo-font;
+                        font-size: 1em;
+                        text-align: justify;
+
+                    }
+
+                    .section_link {
+                        color: map-get($colors, section-card-text-color);
+                        display: block;
+                        text-align: center;
+                    }
+
+                }
+
+            }
+
+        }
+
+        .section_banner {
+            width: 62%;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background: linear-gradient(to right, map-get($colors, button-background-color), map-get($colors, gradient-second-color));
+            position: relative;
+            top: 72px;
+
+            .section_banner_text_wrap {
+                margin-left: 163px;
+                margin-top: 34px;
+
+                .section_banner_heading {
+                    margin: 0;
+                    font-family: $header-heading-font;
+                    color: map-get($colors, landing-logo-font-color);
+                    font-size: 1.5em;
+                    font-weight: bold;
+
+                }
+
+                .section_banner_text {
+                    font-family: $header-heading-font;
+                    color: map-get($colors, section-card-text-color);
+                    margin: 0;
+                    margin-top: 22px;
+                    font-size: 0.9em;
+                }
+            }
+
+            .section_banner_button {
+                @include button-style;
+                margin-right: 160px;
+                margin-top: 48px;
+                margin-bottom: 48px;
+            }
+        }
+
+
+    }
+
+    .footer {
+        height: 234px;
+        width: 100%;
+
+        .footer-wrap {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: map-get($colors, back-color);
+
+            .footer_logo {
+                @extend .landing-logo;
+                padding-top: 138px;
+                padding-left: 193px;
+
+                p {
+                    color: map-get($colors, section-card-text-color);
+                }
+            }
+
+            .footer_text {
+                @include footer-text-style;
+            }
+
+            .footer-cr {
+                @include footer-text-style;
+            }
+        }
+    }
+}
