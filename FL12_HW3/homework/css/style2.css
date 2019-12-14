@@ -152,6 +152,14 @@ body {
           color: #ffffff;
           font-size: 1.5em;
           font-weight: bold; }
+          body .section .section_banner .section_banner_text_wrap .section_banner_heading:after {
+            display: inline-block;
+            height: 44px;
+            line-height: 250%;
+            content: "start";
+            background-color: #ff4e33;
+            position: relative;
+            right: 233px; }
         body .section .section_banner .section_banner_text_wrap .section_banner_text {
           font-family: Source Sans Pro, sans-serif;
           color: #b6bece;

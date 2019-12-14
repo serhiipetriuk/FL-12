@@ -223,6 +223,15 @@ body {
                     font-size: 1.5em;
                     font-weight: bold;
 
+                    &:after {
+                        display: inline-block;
+                        height: 44px;
+                        line-height: 250%;
+                        content: "start";
+                        background-color: map-get($colors, text-selection-color);
+                        position: relative;
+                        right: 233px;
+                    }
                 }
 
                 .section_banner_text {
@@ -231,6 +240,7 @@ body {
                     margin: 0;
                     margin-top: 22px;
                     font-size: 0.9em;
+
                 }
             }
 
