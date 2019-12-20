@@ -198,27 +198,27 @@ hr {
 }
 
 footer {
-	width: 100%;
-	display: flex;
+    width: 100%;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     background-color: #000;
     margin-top: 2%;
 }
 
-.footer-column{
-	max-width: 430px;
-	margin-right: 4%;
-	margin-left: 4%;
-	margin-bottom: 4%;
+.footer-column {
+    max-width: 430px;
+    margin-right: 4%;
+    margin-left: 4%;
+    margin-bottom: 4%;
 }
 
-.footer-heading{
-	color: #fff;
-	font-size: 2em;
-	font-weight: bold;
+.footer-heading {
+    color: #fff;
+    font-size: 2em;
+    font-weight: bold;
 }
 
-.footer-text{
-	color: #777;
+.footer-text {
+    color: #777;
 }
